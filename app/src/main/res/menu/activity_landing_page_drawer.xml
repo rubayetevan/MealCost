@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/overView"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Overview" />
+        <item
+            android:id="@+id/add_cost"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Add Bazar Cost" />
+        <item
+            android:id="@+id/nav_slideshow"
+            android:icon="@drawable/ic_menu_slideshow"
+            android:title="Add Extra Cost" />
+        <item
+            android:id="@+id/add_member"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Add Member" />
+    </group>
+
+    <item android:title="Summary">
+        <menu>
+            <item
+                android:id="@+id/nav_share"
+                android:icon="@drawable/ic_menu_share"
+                android:title="Bazar Summary" />
+            <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Overall Summary" />
+            <item
+                android:id="@+id/send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Individual Summary" />
+            <item
+                android:id="@+id/sendd"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Meal Summary" />
+        </menu>
+    </item>
+
+</menu>
