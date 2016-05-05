@@ -1,5 +1,6 @@
 package com.bdjobs.mealcost.Fragments;
 
+import android.app.DatePickerDialog;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -7,11 +8,16 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.DatePicker;
 import android.widget.EditText;
 import android.widget.Toast;
 
 import com.bdjobs.mealcost.R;
 import com.bdjobs.mealcost.RealmClass.Member;
+
+import java.text.SimpleDateFormat;
+import java.util.Calendar;
+import java.util.Locale;
 
 import io.realm.Realm;
 import io.realm.RealmConfiguration;
@@ -103,4 +109,6 @@ public class Addmember extends Fragment {
         emailET = (EditText) view.findViewById(R.id.emailET);
         addMemberBTN = (Button) view.findViewById(R.id.addMemberBTN);
     }
+
+
 }

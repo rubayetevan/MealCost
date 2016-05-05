@@ -1,5 +1,7 @@
 package com.bdjobs.mealcost.RealmClass;
 
+import java.util.Date;
+
 import io.realm.RealmObject;
 import io.realm.annotations.Required;
 
@@ -7,26 +9,30 @@ import io.realm.annotations.Required;
  * Created by Tabriz on 04-May-16.
  */
 public class Cost extends RealmObject {
-    double extraCost,mainCost;
+    double extraCost, mainCost;
+    @Required
+    String Name;
+    Date date;
 
-    Member member;
-    String date;
 
-    public Member getMember() {
-        return member;
-    }
-
-    public void setMember(Member member) {
-        this.member = member;
-    }
-
-    public String getDate() {
+    public Date getDate() {
         return date;
     }
 
-    public void setDate(String date) {
+    public void setDate(Date date) {
         this.date = date;
     }
+
+
+    public String getName() {
+        return Name;
+    }
+
+    public void setName(String name) {
+        Name = name;
+    }
+
+
 
     public double getExtraCost() {
         return extraCost;

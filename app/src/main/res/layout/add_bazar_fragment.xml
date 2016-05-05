@@ -16,6 +16,7 @@
             android:layout_height="wrap_content"></Spinner>
     </LinearLayout>
     <EditText
+        android:editable="false"
         android:gravity="center"
         android:id="@+id/dateCostET"
         android:hint="Date"

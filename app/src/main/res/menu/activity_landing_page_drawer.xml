@@ -11,9 +11,9 @@
             android:icon="@drawable/ic_menu_gallery"
             android:title="Add Bazar Cost" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/add_meal"
             android:icon="@drawable/ic_menu_slideshow"
-            android:title="Add Extra Cost" />
+            android:title="Add Meal" />
         <item
             android:id="@+id/add_member"
             android:icon="@drawable/ic_menu_manage"

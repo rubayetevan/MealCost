@@ -16,6 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 import com.bdjobs.mealcost.Fragments.AddCost;
+import com.bdjobs.mealcost.Fragments.AddMeal;
 import com.bdjobs.mealcost.Fragments.Addmember;
 import com.bdjobs.mealcost.Fragments.Overview;
 
@@ -105,7 +106,13 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.addToBackStack("addCost");
             transactionL.commit();
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.add_meal) {
+
+            AddMeal addMeal = new AddMeal();
+            FragmentTransaction transactionL =fragmentManager.beginTransaction();
+            transactionL.replace(R.id.landing_page,addMeal,"addMeal");
+            transactionL.addToBackStack("addMeal");
+            transactionL.commit();
 
         } else if (id == R.id.add_member) {
             Addmember addmember =new Addmember();
