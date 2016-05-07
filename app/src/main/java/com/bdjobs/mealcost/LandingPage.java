@@ -18,6 +18,9 @@ import android.view.MenuItem;
 import com.bdjobs.mealcost.Fragments.AddCost;
 import com.bdjobs.mealcost.Fragments.AddMeal;
 import com.bdjobs.mealcost.Fragments.Addmember;
+import com.bdjobs.mealcost.Fragments.BazarSummary;
+import com.bdjobs.mealcost.Fragments.CurrentMonthSummary;
+import com.bdjobs.mealcost.Fragments.MealSummary;
 import com.bdjobs.mealcost.Fragments.Overview;
 
 public class LandingPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -123,11 +126,31 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
 
 
 
-        } /*else if (id == R.id.nav_share) {
+        } else if (id == R.id.bazar_summary) {
+            BazarSummary bazarSummary =new BazarSummary();
+            FragmentTransaction transactionL =fragmentManager.beginTransaction();
+            transactionL.replace(R.id.landing_page,bazarSummary,"bazarSummary");
+            transactionL.addToBackStack("bazarSummary");
+            transactionL.commit();
 
-        } else if (id == R.id.nav_send) {
+        } else if (id == R.id.meal_summary) {
+            MealSummary mealSummary = new MealSummary();
+            FragmentTransaction transactionL =fragmentManager.beginTransaction();
+            transactionL.replace(R.id.landing_page,mealSummary,"mealSummary");
+            transactionL.addToBackStack("mealSummary");
+            transactionL.commit();
 
-        }*/
+        }
+        else if (id == R.id.current_month_summary) {
+            CurrentMonthSummary currentMonthSummary = new CurrentMonthSummary();
+            FragmentTransaction transactionL =fragmentManager.beginTransaction();
+            transactionL.replace(R.id.landing_page,currentMonthSummary,"currentMonthSummary");
+            transactionL.addToBackStack("currentMonthSummary");
+            transactionL.commit();
+
+        }
+
+       
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

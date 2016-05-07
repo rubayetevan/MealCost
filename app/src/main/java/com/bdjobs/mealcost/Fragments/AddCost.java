@@ -1,6 +1,7 @@
 package com.bdjobs.mealcost.Fragments;
 
 import android.app.DatePickerDialog;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -112,6 +113,7 @@ public class AddCost extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+        //getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         realmDB();
         settingSpinner();
         datePicker();

@@ -23,21 +23,21 @@
     <item android:title="Summary">
         <menu>
             <item
-                android:id="@+id/nav_share"
+                android:id="@+id/bazar_summary"
                 android:icon="@drawable/ic_menu_share"
                 android:title="Bazar Summary" />
             <item
-                android:id="@+id/nav_send"
+                android:id="@+id/meal_summary"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Overall Summary" />
+                android:title="Meal Summary" />
             <item
-                android:id="@+id/send"
+                android:id="@+id/current_month_summary"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Individual Summary" />
+                android:title="Current Month's Summary" />
             <item
                 android:id="@+id/sendd"
                 android:icon="@drawable/ic_menu_send"
-                android:title="Meal Summary" />
+                android:title="" />
         </menu>
     </item>
 

@@ -1,6 +1,7 @@
 package com.bdjobs.mealcost.Fragments;
 
 import android.app.DatePickerDialog;
+import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
@@ -125,6 +126,7 @@ public class AddMeal extends Fragment {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
+       // getActivity().setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         datePicker();
         mealDateET.setKeyListener(null);
         realmDB();
@@ -152,17 +154,14 @@ public class AddMeal extends Fragment {
 
             EditText breakFastET = new EditText(getActivity());
             breakFastET.setInputType(InputType.TYPE_CLASS_NUMBER);
-            //breakFastET.setId(); //Set id so that you can remove that EditText in the future.
             breakFastET.setLayoutParams(params);
 
             EditText launchET = new EditText(getActivity());
             launchET.setInputType(InputType.TYPE_CLASS_NUMBER);
-            //launchET.setId(); //Set id so that you can remove that EditText in the future.
             launchET.setLayoutParams(params);
 
             EditText dinnerET = new EditText(getActivity());
             dinnerET.setInputType(InputType.TYPE_CLASS_NUMBER);
-            //dinnerET.setId(); //Set id so that you can remove that EditText in the future.
             dinnerET.setLayoutParams(params);
 
             linearLayout.addView(nameTV);
