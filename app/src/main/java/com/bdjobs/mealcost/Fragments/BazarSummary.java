@@ -99,7 +99,6 @@ public class BazarSummary extends Fragment {
 
 
     }
-
     private void realmDB() {
         realmConfig = new RealmConfiguration.Builder(getActivity()).build();
         realm = Realm.getInstance(realmConfig);

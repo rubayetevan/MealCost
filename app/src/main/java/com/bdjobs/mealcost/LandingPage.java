@@ -20,8 +20,11 @@ import com.bdjobs.mealcost.Fragments.AddMeal;
 import com.bdjobs.mealcost.Fragments.Addmember;
 import com.bdjobs.mealcost.Fragments.BazarSummary;
 import com.bdjobs.mealcost.Fragments.CurrentMonthSummary;
+import com.bdjobs.mealcost.Fragments.IndividualBazar;
+import com.bdjobs.mealcost.Fragments.IndividualMeal;
 import com.bdjobs.mealcost.Fragments.MealSummary;
 import com.bdjobs.mealcost.Fragments.Overview;
+import com.bdjobs.mealcost.Fragments.PreviousMonthSummary;
 
 public class LandingPage extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -146,6 +149,30 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             FragmentTransaction transactionL =fragmentManager.beginTransaction();
             transactionL.replace(R.id.landing_page,currentMonthSummary,"currentMonthSummary");
             transactionL.addToBackStack("currentMonthSummary");
+            transactionL.commit();
+
+        }
+        else if (id == R.id.individual_bazar_summary) {
+            IndividualBazar individualBazar = new IndividualBazar();
+            FragmentTransaction transactionL =fragmentManager.beginTransaction();
+            transactionL.replace(R.id.landing_page,individualBazar,"individualBazar");
+            transactionL.addToBackStack("individualBazar");
+            transactionL.commit();
+
+        }
+        else if (id == R.id.individual_meal_summary) {
+            IndividualMeal individualMeal = new IndividualMeal();
+            FragmentTransaction transactionL =fragmentManager.beginTransaction();
+            transactionL.replace(R.id.landing_page,individualMeal,"individualMeal");
+            transactionL.addToBackStack("individualMeal");
+            transactionL.commit();
+
+        }
+        else if (id == R.id.previous_month_summary) {
+            PreviousMonthSummary previousMonthSummary = new PreviousMonthSummary();
+            FragmentTransaction transactionL =fragmentManager.beginTransaction();
+            transactionL.replace(R.id.landing_page,previousMonthSummary,"previousMonthSummary");
+            transactionL.addToBackStack("previousMonthSummary");
             transactionL.commit();
 
         }
