@@ -62,7 +62,6 @@ public class IndividualBazar extends Fragment {
         initializer();
         return view;
     }
-
     private void initializer() {
         dateFromET = (EditText) view.findViewById(R.id.IBdateFrom);
         dateToET = (EditText) view.findViewById(R.id.IBdateTo);
