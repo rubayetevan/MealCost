@@ -30,15 +30,10 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
 
     FragmentManager fragmentManager;
 
-
-
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_landing_page);
-
-
 
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -49,16 +44,12 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-
         fragmentManager = getSupportFragmentManager();
         FragmentTransaction transaction =fragmentManager.beginTransaction();
         Overview overview = new Overview();
         transaction.add(R.id.landing_page,overview,"overview");
         transaction.commit();
-
-
-
-
+        this.getSupportActionBar().setTitle("Overview");
 
     }
 
@@ -103,6 +94,7 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             Overview overview = new Overview();
             transaction.replace(R.id.landing_page,overview,"overview");
             transaction.commit();
+            this.getSupportActionBar().setTitle("Overview");
 
             // Handle the camera action
         } else if (id == R.id.add_cost) {
@@ -111,6 +103,8 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,addCost,"addCost");
             transactionL.addToBackStack("addCost");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Add Cost");
+
 
         } else if (id == R.id.add_meal) {
 
@@ -119,6 +113,7 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,addMeal,"addMeal");
             transactionL.addToBackStack("addMeal");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Add meal");
 
         } else if (id == R.id.add_member) {
             Addmember addmember =new Addmember();
@@ -126,7 +121,7 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,addmember,"addmember");
             transactionL.addToBackStack("addmember");
             transactionL.commit();
-
+            this.getSupportActionBar().setTitle("Add Member");
 
 
         } else if (id == R.id.bazar_summary) {
@@ -135,6 +130,7 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,bazarSummary,"bazarSummary");
             transactionL.addToBackStack("bazarSummary");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Bazar Summary");
 
         } else if (id == R.id.meal_summary) {
             MealSummary mealSummary = new MealSummary();
@@ -142,6 +138,7 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,mealSummary,"mealSummary");
             transactionL.addToBackStack("mealSummary");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Meal Summary");
 
         }
         else if (id == R.id.current_month_summary) {
@@ -150,6 +147,7 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,currentMonthSummary,"currentMonthSummary");
             transactionL.addToBackStack("currentMonthSummary");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Current Month Summary");
 
         }
         else if (id == R.id.individual_bazar_summary) {
@@ -158,6 +156,8 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,individualBazar,"individualBazar");
             transactionL.addToBackStack("individualBazar");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Individual Bazar");
+
 
         }
         else if (id == R.id.individual_meal_summary) {
@@ -166,6 +166,7 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,individualMeal,"individualMeal");
             transactionL.addToBackStack("individualMeal");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Individual Meal");
 
         }
         else if (id == R.id.previous_month_summary) {
@@ -174,10 +175,10 @@ public class LandingPage extends AppCompatActivity implements NavigationView.OnN
             transactionL.replace(R.id.landing_page,previousMonthSummary,"previousMonthSummary");
             transactionL.addToBackStack("previousMonthSummary");
             transactionL.commit();
+            this.getSupportActionBar().setTitle("Previous Month Summary");
 
         }
 
-       
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);

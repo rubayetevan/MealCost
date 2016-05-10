@@ -1,6 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:orientation="vertical" android:layout_width="match_parent"
-    android:layout_height="match_parent">
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:id="@+id/individual_meal_layout"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:textColor="@android:color/black"
+                android:textSize="20sp"
+                android:text="Name:"
+                android:layout_weight="1"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content" />
 
-</LinearLayout>
+            <Spinner
+                android:layout_weight="1"
+                android:id="@+id/IMmemberNameSP"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content">
+
+
+            </Spinner>
+        </LinearLayout>
+        <EditText
+            android:cursorVisible="false"
+            android:editable="false"
+            android:id="@+id/IMdateFrom"
+            android:gravity="center"
+            android:hint="Date From"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:cursorVisible="false"
+            android:editable="false"
+            android:id="@+id/IMdateTo"
+            android:gravity="center"
+            android:hint="To Date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <Button
+            android:id="@+id/IMsearchBtn"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:text="SEARCH"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+        <LinearLayout
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+
+                android:textColor="@android:color/black"
+                android:text="Date"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <TextView
+
+
+                android:textColor="@android:color/black"
+                android:text="Name"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <TextView
+
+                android:textColor="@android:color/black"
+                android:text="Brakfast"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <TextView
+
+                android:textColor="@android:color/black"
+                android:text="Launch"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+            <TextView
+
+                android:textColor="@android:color/black"
+                android:text="Dinner"
+                android:layout_width="0dp"
+                android:layout_weight="1"
+                android:layout_height="match_parent" />
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+</ScrollView>
